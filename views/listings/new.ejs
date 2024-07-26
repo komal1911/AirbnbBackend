@@ -1,0 +1,62 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row">
+    <div class="col-8 offset-2">
+<br>
+    <h1>Create a new list</h1>
+    <form method="post" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+
+        <div class="mb-3">
+        
+    <label for="title" class="form-label">Title</label>
+    <input name="listing[title]" required placeholder="enter your title" class="form-control" type="text"/>
+    <div class="valid-feedback">
+        Looks good!
+      </div>
+      <div class="invalid-feedback">
+        Please add a valid title.
+      </div>
+    </div>
+    <div class="mb-3">
+     <label for="description" class="form-label">Description</label>
+     <textarea name="listing[description]" required class="form-control" placeholder="enter the description"> </textarea>
+     <div class="invalid-feedback">
+        Please add a valid description.
+      </div>
+    </div>
+    <div class="mb-3">
+    <label for="price" class="form-label">Price</label>
+    <input name="listing[price]" required placeholder="enter the price" class="form-control" type="text"/>
+    <div class="invalid-feedback">
+        Please add a valid price.
+      </div>
+    </div>
+
+    <div class="mb-3">
+    <label for="Image" class="form-label">Upload Listing Image</label>
+    <input name="listing[image]"  placeholder="Upload an Image" required class="form-control" type="file"/>
+    
+    </div>
+ 
+    <div class="row">
+    <div class="mb-3 col-md-4">
+    <label for="Location" class="form-label">Location</label>
+    <input name="listing[location]" required placeholder="enter the location" class="form-control" type="text"/>
+    <div class="invalid-feedback">
+        Please add a valid location.
+      </div>
+    </div>
+     
+    <div class="mb-3 col-md-8">
+    <Label for="country" class="form-label">Country</Label>
+    <input name="listing[country]" required placeholder="enter your country"  class="form-control" type ="text"/>
+    <div class="invalid-feedback">
+        Please add a valid Country.
+      </div>
+    </div>
+    </div>
+    <button class=" btn add-btn">Add</button>
+    
+    </form>
+    <br>
+</div>
+</div>
